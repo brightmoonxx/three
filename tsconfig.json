@@ -1,0 +1,40 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "exclude": ["node_modules", "dist", "**/*.js"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "types/*.d.ts","src/**/*.ts","vite.config.ts", "src/**/*.tsx"],
+
+  "compilerOptions": {
+    "strict": false,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@build/*": ["build/*"]
+    },
+    "types": [
+      "node",
+      "vite/client",
+      "element-plus/global"
+    ],
+    "typeRoots": ["./node_modules/@types/", "./types"]
+  },
+  
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
